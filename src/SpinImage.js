@@ -23,7 +23,7 @@ export default class SpinImage extends Component {
 
   getSpinValue = () =>
     this.spinValue.interpolate({
-      inputRange: [0, 1],
+      inputRange: [0, 0.5],
       outputRange: ['0deg', '360deg']
     });
 

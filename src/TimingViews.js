@@ -65,7 +65,7 @@ export default class TimingViews extends Component {
             marginLeft,
             height: 30,
             width: 40,
-            backgroundColor: 'red'
+            backgroundColor: 'green'
           }}
         />
         <Animated.View
@@ -74,7 +74,7 @@ export default class TimingViews extends Component {
             marginTop: 10,
             height: 30,
             width: 40,
-            backgroundColor: 'blue'
+            backgroundColor: 'cyan'
           }}
         />
         <Animated.View
@@ -83,14 +83,14 @@ export default class TimingViews extends Component {
             marginTop: 10,
             height: 30,
             width: 40,
-            backgroundColor: 'orange'
+            backgroundColor: 'red'
           }}
         />
         <Animated.Text
           style={{
             fontSize: textSize,
             marginTop: 10,
-            color: 'green'
+            color: 'red'
           }}
         >
           Animated Text!

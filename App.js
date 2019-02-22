@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import SpinImage from './src/SpinImage';
 import TimingViews from './src/TimingViews';
+import AnimatedSpring from './src/AnimatedSpring';
 
 export default class App extends Component {
   constructor(props) {
@@ -19,13 +20,15 @@ export default class App extends Component {
       componentsObject: {
         spin: this.renderSpinAnimation,
         timingViews: this.renderTimingViews,
+        animatedSpring: this.renderAnimatedSpringView,
         default: this.renderSpinAnimation
       }
     };
   }
 
   renderSpinAnimation = () => <SpinImage />;
-  renderTimingViews = () => <TimingViews />
+  renderTimingViews = () => <TimingViews />;
+  renderAnimatedSpringView = () => <AnimatedSpring />;
 
   handlerAnimatedComponents = component => {
     const { componentsObject } = this.state;
@@ -58,10 +61,22 @@ export default class App extends Component {
     </TouchableOpacity>
   );
 
+  renderAnimatedSpringButton = () => (
+    <TouchableOpacity
+      style={styles.buttonContainer}
+      onPress={() => this.updateRenderComponentState('animatedSpring')}
+    >
+      <View style={styles.buttonViewContainer}>
+        <Text style={styles.textButton}>Animated Spring</Text>
+      </View>
+    </TouchableOpacity>
+  );
+
   renderButtons = () => (
     <View>
       {this.renderSpinButton()}
       {this.renderTimingViewsButton()}
+      {this.renderAnimatedSpringButton()}
     </View>
   );
 
